@@ -27,6 +27,9 @@ void push_linked_list_stack(linked_list_stack* stack, int val) {
 }
 
 int pop_linked_list_stack(linked_list_stack* stack) {
+    if (is_empty_linked_list_stack(stack)) {
+        return 0;
+    }
     node *head = stack->l;
     node *next = head->next;
     stack->l = next;

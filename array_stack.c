@@ -19,6 +19,9 @@ void push_array_stack(array_stack* stack, int val) {
 }
 
 int pop_array_stack(array_stack* stack) {
+    if (is_empty_linked_list_stack(stack)) {
+        return 0;
+    }
     stack->top--;
     return stack->stk[stack->top];
 }
